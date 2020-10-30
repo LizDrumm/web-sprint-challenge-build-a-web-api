@@ -61,10 +61,41 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+
+Node's HTTP server uses a single request handler function for all requests. Express provides a way to break the application into different request handlers for each URL+ HTTP method combination.
+
+This feature is called Routing and is one of the main features of Express.
+
+
+
 1. Understand and explain the use of Middleware?
+
+Express is a minimalist framework. It doesn’t provide everything out of the box, but using middleware we can add extra functionality to our application. Middleware provide a way to extend the features provided by the Express framework.
+
+
 1. The basic principles of the REST architectural style.
+REST is a generally agreed-upon set of principles and constraints. They are recommendations, not a standard.
+
+When designing a RESTful Web API, keep the following principles in mind:
+
+everything is a resource.
+each resource is accessible via a unique URI.
+resources can have multiple representations.
+communication happens over a stateless protocol (HTTP).
+resource management happens via HTTP methods.
+By applying the REST architecture to our APIs, we can make them scalable and simpler to maintain and extend.
+
+
 1. Understand and explain the use of Express Routers.
+Routing is a way to select which request handler function is executed. It does so based on the URL visited and the HTTP method used. Routing provides a way to break an application into smaller parts.
+
+Routers for Application Modularity
+Applications can be broken up into routers. We could have a router to serve our SPA and another router for our API. Each router can have its own middleware and routing. This combination provides improved functionality.
+
+
 1. Describe tooling used to manually test the correctness of an API.
+
+ Postman, Insomnia, HTTPIE
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
