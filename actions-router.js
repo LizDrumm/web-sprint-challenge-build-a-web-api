@@ -46,21 +46,24 @@ router.get('/:id', (req, res) => {
 
 //ask about this one? I think it should also have id???
 router.post('/', (req, res) => {
-    Actions.insert(req.body)
+    const newAction = req.body
+    Actions.insert(newAction)
     .then(action => {
-        if(action.notes && action.description){
+        if(action
+            ){
             res.status(200).json({
                 data: action
             })
         } else {
             res.status(400).json({
-                errorMessage: "Please provide action description and notes."
+                errorMessage: "Please provide action description and notes and the idea of the post you'd like to post the action to."
             })
         }
     })
     .catch(error => {
+
         res.status(500).json({
-            error: "Error posting action."
+            error: "Error posting action.", error
         });
     });
 });
